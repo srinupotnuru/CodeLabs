@@ -11,10 +11,12 @@ var bt = document.getElementById("submit");
 function run() {
   bt.disabled = true;
   let code = editor.getValue();
-
+  var e = document.getElementById("langs");
+  var value = e.options[e.selectedIndex].value;
+  console.log(value);
   axios
     .post("/evaluate", {
-      lan: "cpp14",
+      lan: value,
       program: code,
     })
     .then((res) => {
