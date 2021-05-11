@@ -13,7 +13,6 @@ function run() {
   let code = editor.getValue();
   var e = document.getElementById("langs");
   var value = e.options[e.selectedIndex].value;
-  console.log(value);
   axios
     .post("/evaluate", {
       lan: value,
@@ -28,3 +27,4 @@ function run() {
       bt.disabled = false;
     });
 }
+
