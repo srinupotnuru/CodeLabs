@@ -8,7 +8,6 @@ app.use(bp.json());
 
 app.post("/evaluate", (req, res) => {
   console.log(req.body);
-
   let executable = {
     script: req.body.program,
     language: req.body.lan,
